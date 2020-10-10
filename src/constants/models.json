@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Animal Classifier",
+        "description": "Classify animal species",
+        "path": "animalclassifier",
+        "github": ""
+    },
+    {
+        "name": "Yolo V5",
+        "description": "Fast object detection and classification algorithm.",
+        "path": "yolov5",
+        "github": ""
+    }
+]

@@ -1,0 +1,14 @@
+{
+    "name": "Yolo V5",
+    "description": "Fast object detection model based on the newest yoloV5 algorithm.",
+    
+    "input_type": "JSON (base64)",
+    "output_type": "JSON (base64)",
+    "sample_input": "https://st.hzcdn.com/simgs/pictures/kitchens/mrgreensincharge-amy-storm-and-company-img~32610be50a52da3d_4-5494-1-ad43b18.jpg",
+    "sample_output": "https://st.hzcdn.com/simgs/pictures/kitchens/mrgreensincharge-amy-storm-and-company-img~32610be50a52da3d_4-5494-1-ad43b18.jpg",
+
+    "category": "Computer Vision",
+
+    "framework": "Tensorflow",
+    "framework_url": "https://www.tensorflow.org/"
+}

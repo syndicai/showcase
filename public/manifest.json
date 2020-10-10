@@ -1,0 +1,35 @@
+{
+    "short_name": "Syndicai Showcase",
+    "name": "Syndicai Sample Models Showcase",
+    "icons": [
+      {
+        "src": "https://github.com/syndicai/brand/blob/main/favicon/favicon_16.png",
+        "type": "image/png",
+        "sizes": "16x16"
+      },
+      {
+        "src": "https://github.com/syndicai/brand/blob/main/favicon/favicon_32.png",
+        "type": "image/png",
+        "sizes": "32x32"
+      },
+      {
+        "src": "https://github.com/syndicai/brand/blob/main/favicon/favicon_180.png",
+        "type": "image/png",
+        "sizes": "180x180"
+      },
+      {
+        "src": "https://github.com/syndicai/brand/blob/main/favicon/favicon_192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "https://github.com/syndicai/brand/blob/main/favicon/favicon_512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+  }

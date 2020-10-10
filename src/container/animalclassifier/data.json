@@ -1,0 +1,14 @@
+{
+    "name": "Animal Classifier",
+    "description": "Species object detection algorithm powered by MobilenetV2 network.",
+    
+    "input_type": "JSON (base64)",
+    "output_type": "JSON (text)",
+    "sample_input": "https://images.pexels.com/photos/567540/pexels-photo-567540.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    "sample_output": "sample output",
+
+    "category": "Computer Vision",
+
+    "framework": "Tensorflow",
+    "framework_url": "https://www.tensorflow.org/"
+}
