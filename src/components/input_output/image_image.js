@@ -1,5 +1,5 @@
 import React from "react";
-import { Code, Button, Input, Image, GeistProvider, CssBaseline } from '@geist-ui/react'
+import { Button, Input, Image, GeistProvider, CssBaseline } from '@geist-ui/react'
 import { RefreshCcw } from '@geist-ui/react-icons'
 
 
