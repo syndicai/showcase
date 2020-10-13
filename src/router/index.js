@@ -17,8 +17,8 @@ const RootRouter = () => {
       <Navbar />
       <Switch>
         <Route exact path={RouterConfig.HOME} component={Home}></Route>
-        <Route exact path={RouterConfig.ANIMALCLASSIFIER} component={AnimalClassifier}></Route>
-        <Route exact path={RouterConfig.YOLOV5} component={YoloV5}></Route>
+        <Route path={RouterConfig.ANIMALCLASSIFIER} component={AnimalClassifier}></Route>
+        <Route path={RouterConfig.YOLOV5} component={YoloV5}></Route>
       </Switch>
       <Footer />
     </Router>
