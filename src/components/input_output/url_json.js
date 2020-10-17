@@ -33,7 +33,6 @@ export default class InputJson extends React.Component {
                 let reader = new FileReader();
                 reader.readAsDataURL(data);
                 reader.onloadend = () => {
-                    let result = reader.result;
                     fetch(
                         "https://30008950-db97-4c4d-b3ed-94ddd06a451e.d1.syndic.ai",
                         {
