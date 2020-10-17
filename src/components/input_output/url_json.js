@@ -16,9 +16,9 @@ export default class InputJson extends React.Component {
 
     toggleButtonState = () => {
         let proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-        let url = this.state.img_url
+        let input_url = this.state.img_url
         this.setState({ loading: true, output: null});
-        fetch(proxyUrl + url, {
+        fetch(proxyUrl + input_url, {
             method: 'GET',
             crossDomain: true,
             headers: {
@@ -34,15 +34,14 @@ export default class InputJson extends React.Component {
                 reader.readAsDataURL(data);
                 reader.onloadend = () => {
                     let result = reader.result;
-                    let base64data = result.substr(result.indexOf(',')+1)
                     fetch(
-                        "https://ac0a8dd7-8035-409c-ba2a-5c68e240fdd7.d1.syndic.ai/predict",
+                        "https://30008950-db97-4c4d-b3ed-94ddd06a451e.d1.syndic.ai",
                         {
                             method: "POST",
                             headers: {
                                 'Content-Type': 'application/json',
                             },
-                            body: JSON.stringify({ data: { ndarray: base64data } })
+                            body: JSON.stringify({ url: input_url})
                         }
                     )
                         .then((response) => {

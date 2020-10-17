@@ -7,7 +7,7 @@ import Footer from '../components/footer'
 import Home from '../container/home'
 
 import AnimalClassifier from '../container/animalclassifier'
-import YoloV5 from '../container/yolov5'
+import AlexNet from '../container/alexnet'
 
 
 
@@ -18,7 +18,7 @@ const RootRouter = () => {
       <Switch>
         <Route exact path={RouterConfig.HOME} component={Home}></Route>
         <Route path={RouterConfig.ANIMALCLASSIFIER} component={AnimalClassifier}></Route>
-        <Route path={RouterConfig.YOLOV5} component={YoloV5}></Route>
+        <Route path={RouterConfig.ALEXNET} component={AlexNet}></Route>
       </Switch>
       <Footer />
     </Router>

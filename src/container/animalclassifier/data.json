@@ -10,5 +10,5 @@
     "category": "Computer Vision",
 
     "framework": "Tensorflow",
-    "framework_url": "https://www.tensorflow.org/"
+    "framework_url": "https://github.com/syndicai/models/tree/master/tensorflow/animal_classifier"
 }

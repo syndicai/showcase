@@ -3,12 +3,12 @@
         "name": "Animal Classifier",
         "description": "Classify animal species",
         "path": "animalclassifier",
-        "github": ""
+        "github": "https://github.com/syndicai/models/tree/master/tensorflow/animal_classifier"
     },
     {
-        "name": "Yolo V5",
-        "description": "Fast object detection and classification algorithm.",
-        "path": "yolov5",
-        "github": ""
+        "name": "AlexNet Image Classifier",
+        "description": "Classify images using AlexNet Network.",
+        "path": "alexnet",
+        "github": "https://github.com/syndicai/models/tree/master/pytorch/image_classifier_alexnet"
     }
 ]

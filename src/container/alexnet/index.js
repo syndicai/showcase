@@ -2,7 +2,7 @@ import React from 'react'
 import Heading from './../../components/model/heading'
 import About from './../../components/model/about'
 import Run from './../../components/model/run'
-import ImageImage from './../../components/input_output/image_image'
+import UrlJson from './../../components/input_output/url_json'
 
 import data from './data.json'
 
@@ -14,7 +14,7 @@ const YoloV5 = () => {
       <Heading data={data} />
 
       <Run>
-        <ImageImage data={data}/>
+        <UrlJson data={data}/>
       </Run>
 
       <About data={data} />
