@@ -1,6 +1,6 @@
 {
     "name": "AlexNet Image Classifier",
-    "description": "Classifiy image using on AlexNet model.",
+    "description": "Classify image using on AlexNet model.",
     
     "input_type": "JSON (base64)",
     "output_type": "String",

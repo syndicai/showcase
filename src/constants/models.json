@@ -10,5 +10,11 @@
         "description": "Classify images using AlexNet Network.",
         "path": "alexnet",
         "github": "https://github.com/syndicai/models/tree/master/pytorch/image_classifier_alexnet"
+    },
+    {
+        "name": "Food Classifier",
+        "description": "Classify food using Inceptionv3 model",
+        "path": "foodclassifier",
+        "github": "https://github.com/JanMigon/food_recognition"
     }
 ]

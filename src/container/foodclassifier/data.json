@@ -1,0 +1,14 @@
+{
+    "name": "Food Classifier",
+    "description": "Classify food using Inceptionv3 model",
+
+    "input_type": "image url",
+    "output_type": "String",
+    "sample_input": "https://www.dropbox.com/s/5sziraj8mc66ua6/40449.jpg?raw=1",
+    "sample_output": "pizza",
+
+    "category": "Computer Vision",
+
+    "framework": "Tensorflow",
+    "framework_url": "https://github.com/JanMigon/food_recognition"
+}
