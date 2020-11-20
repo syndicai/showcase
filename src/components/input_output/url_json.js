@@ -5,6 +5,7 @@ import { Button, Input, Image, GeistProvider, CssBaseline, Code } from '@geist-u
 
 export default class InputJson extends React.Component {
     state = {
+        model: this.props.data.model,
         img_url: this.props.data.sample_input,
         output: null,
         loading: false,
@@ -34,7 +35,7 @@ export default class InputJson extends React.Component {
                 reader.readAsDataURL(data);
                 reader.onloadend = () => {
                     fetch(
-                        "https://30008950-db97-4c4d-b3ed-94ddd06a451e.d1.syndic.ai",
+                        this.state.model,
                         {
                             method: "POST",
                             headers: {

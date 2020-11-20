@@ -1,14 +1,13 @@
 import React from "react"
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import * as RouterConfig from '../constants/RouterConfig'
 
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
-import Home from '../container/home'
+import Home from '../components/home'
 
-import AnimalClassifier from '../container/animalclassifier'
-import AlexNet from '../container/alexnet'
-
+import AnimalClassifier from '../models/animalClassifier'
+import AlexNet from '../models/alexNet'
+import YoloV5 from '../models/yolov5'
 
 
 const RootRouter = () => {
@@ -16,9 +15,10 @@ const RootRouter = () => {
     <Router>
       <Navbar />
       <Switch>
-        <Route exact path={RouterConfig.HOME} component={Home}></Route>
-        <Route path={RouterConfig.ANIMALCLASSIFIER} component={AnimalClassifier}></Route>
-        <Route path={RouterConfig.ALEXNET} component={AlexNet}></Route>
+        <Route exact path='/' component={Home}></Route>
+        <Route path='/animalclassifier' component={AnimalClassifier}></Route>
+        <Route path='/alexnet' component={AlexNet}></Route>
+        <Route path='/yolov5' component={YoloV5}></Route>
       </Switch>
       <Footer />
     </Router>

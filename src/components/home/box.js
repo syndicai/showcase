@@ -18,7 +18,7 @@ export default function Box(model) {
           </Text>
           <Card.Footer>
             <Link color target="_blank" href={model.data.github}>
-              <Text small>Visit source code on GitHub.</Text>
+              <Text small>Visit source code.</Text>
             </Link>
           </Card.Footer>
         </Card>
