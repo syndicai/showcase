@@ -3,7 +3,7 @@ import { Button, Input, Image, GeistProvider, CssBaseline, Code } from '@geist-u
 // import { RefreshCcw } from '@geist-ui/react-icons'
 
 
-export default class InputJson extends React.Component {
+export default class StrJson extends React.Component {
     state = {
         model: this.props.data.model,
         img_url: this.props.data.sample_input,
@@ -17,9 +17,9 @@ export default class InputJson extends React.Component {
 
     toggleButtonState = () => {
         let proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-        let url = this.state.img_url
+        let input_url = this.state.img_url
         this.setState({ loading: true, output: null});
-        fetch(proxyUrl + url, {
+        fetch(proxyUrl + input_url, {
             method: 'GET',
             crossDomain: true,
             headers: {
@@ -34,8 +34,6 @@ export default class InputJson extends React.Component {
                 let reader = new FileReader();
                 reader.readAsDataURL(data);
                 reader.onloadend = () => {
-                    let result = reader.result;
-                    let base64data = result.substr(result.indexOf(',')+1)
                     fetch(
                         this.state.model,
                         {
@@ -43,7 +41,7 @@ export default class InputJson extends React.Component {
                             headers: {
                                 'Content-Type': 'application/json',
                             },
-                            body: JSON.stringify({ data: { ndarray: base64data } })
+                            body: JSON.stringify({ strData: input_url})
                         }
                     )
                         .then((response) => {

@@ -1,13 +1,14 @@
 import React from 'react'
 import { GeistProvider, CssBaseline } from '@geist-ui/react';
 
-import Heading from './../components/home/heading';
-import Box from './../components/home/box';
+import Heading from './heading';
+import Box from './box';
 
-import models from './../constants/models.json'
+import models from './../../models/models.json'
 
 
 const Home = () => {
+
   return (
 
     <GeistProvider>

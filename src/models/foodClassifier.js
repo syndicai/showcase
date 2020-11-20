@@ -2,19 +2,19 @@ import React from 'react'
 import Heading from './../../components/model/heading'
 import About from './../../components/model/about'
 import Run from './../../components/model/run'
-import ImageJson from './../../components/input_output/image_json'
+import StrJson from './../../components/input_output/str_json'
 
 import data from './data.json'
 
 
-const AnimalClassifier = () => {
+const FoodClassifier = () => {
   return (
     <div>
 
       <Heading data={data} />
 
       <Run>
-        <ImageJson data={data}/>
+        <StrJson data={data}/>
       </Run>
 
       <About data={data} />
@@ -23,4 +23,4 @@ const AnimalClassifier = () => {
   )
 }
 
-export default AnimalClassifier
+export default FoodClassifier
