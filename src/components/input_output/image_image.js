@@ -3,7 +3,7 @@ import { Button, Input, Image, GeistProvider, CssBaseline, Code } from '@geist-u
 // import { RefreshCcw } from '@geist-ui/react-icons'
 
 
-export default class InputImage extends React.Component {
+export default class ImageImage extends React.Component {
     state = {
         model: this.props.data.model,
         img_url: this.props.data.sample_input,
@@ -12,7 +12,7 @@ export default class InputImage extends React.Component {
     };
 
     toggleInputChange = (e) => {
-        this.setState({ img_url: e.target.value});
+        this.setState({ img_url: e.target.value, output: null});
     }
 
     toggleButtonState = () => {
@@ -50,7 +50,7 @@ export default class InputImage extends React.Component {
                             return response.text();
                         })
                         .then((data) => {
-                            this.setState({ output: data, loading: false});
+                            this.setState({ output: JSON.parse(data).strData, loading: false});
                         })
                 }
             })
@@ -70,16 +70,6 @@ export default class InputImage extends React.Component {
                         </div>
                 }
 
-                {/* OUTPUT: Json */}
-                {
-                    (this.state.output === null)
-                        ? null
-                        : <div className="w-full background-dots flex justify-center items-center" >
-                            <Code width="100%" className="bg-white" block>{this.state.output}</Code>
-                        </div>
-                }
-
-
                 {/* RUN Model */}
                 <div className="my-5">
                     <Input value={this.state.img_url} width="100%" onChange={this.toggleInputChange} />
@@ -88,6 +78,15 @@ export default class InputImage extends React.Component {
                         {/*<Button className="my-2" iconRight={<RefreshCcw />} auto />*/}
                     </div>
                 </div>
+
+                {/* OUTPUT: Json */}
+                {
+                    (this.state.output === null)
+                        ? null
+                        : <div className="w-full background-dots flex justify-center items-center" >
+                            <Image height="440"  src={`data:image/png;base64,${this.state.output}`}/>
+                        </div>
+                }
 
             </GeistProvider>
         );

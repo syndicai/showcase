@@ -12,7 +12,7 @@ export default class StrImage extends React.Component {
     };
 
     toggleInputChange = (e) => {
-        this.setState({ img_url: e.target.value});
+        this.setState({ img_url: e.target.value, output: null});
     }
 
     toggleButtonState = () => {
@@ -48,7 +48,7 @@ export default class StrImage extends React.Component {
                             return response.text();
                         })
                         .then((data) => {
-                            this.setState({ output: data, loading: false});
+                            this.setState({ output: JSON.parse(data).strData, loading: false});
                         })
                 }
             })
@@ -68,15 +68,6 @@ export default class StrImage extends React.Component {
                         </div>
                 }
 
-                {/* OUTPUT: Json */}
-                {
-                    (this.state.output === null)
-                        ? null
-                        : <div className="w-full background-dots flex justify-center items-center" >
-                            <Code width="100%" className="bg-white" block>{this.state.output}</Code>
-                        </div>
-                }
-
 
                 {/* RUN Model */}
                 <div className="my-5">
@@ -86,6 +77,15 @@ export default class StrImage extends React.Component {
                         {/*<Button className="my-2" iconRight={<RefreshCcw />} auto />*/}
                     </div>
                 </div>
+
+                {/* OUTPUT: Json */}
+                {
+                    (this.state.output === null)
+                        ? null
+                        : <div className="w-full background-dots flex justify-center items-center" >
+                            <Image height="440"  src={`data:image/png;base64,${this.state.output}`}/>
+                        </div>
+                }
 
             </GeistProvider>
         );

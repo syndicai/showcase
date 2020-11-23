@@ -2,7 +2,7 @@ import React from 'react'
 import Heading from '../components/model/heading'
 import About from '../components/model/about'
 import Run from '../components/model/run'
-import UrlJson from '../components/input_output/url_json'
+import StrImage from "../components/input_output/str_image";
 
 import models from './models.json'
 
@@ -17,7 +17,7 @@ const AlexNet = () => {
       <Heading data={data} />
 
       <Run>
-        <UrlJson data={data}/>
+        <StrImage data={data}/>
       </Run>
 
       <About data={data} />

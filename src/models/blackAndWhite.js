@@ -17,7 +17,7 @@ const BlackAndWhite = () => {
       <Heading data={data} />
 
       <Run>
-        {/* <ImageImage data={data}/> */}
+         <ImageImage data={data}/>
       </Run>
 
       <About data={data} />
