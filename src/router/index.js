@@ -8,6 +8,7 @@ import Home from '../components/home'
 import AnimalClassifier from '../models/animalClassifier'
 import AlexNet from '../models/alexNet'
 import YoloV5 from '../models/yolov5'
+import BlackAndWhite from "../models/blackAndWhite";
 
 
 const RootRouter = () => {
@@ -19,6 +20,7 @@ const RootRouter = () => {
         <Route path='/animalclassifier' component={AnimalClassifier}></Route>
         <Route path='/alexnet' component={AlexNet}></Route>
         <Route path='/yolov5' component={YoloV5}></Route>
+        <Route path='/blackandwhite' component={BlackAndWhite}></Route>
       </Switch>
       <Footer />
     </Router>
