@@ -13,10 +13,10 @@
 </p>
 
 # Showcase
-Showcase is the React web app created for the sample models. 
+Showcase is the React web app created for the sample models deployed using [Syndicai Platform](https://syndicai.co). 
 
 ## Demo
-![Syndicai Showcase Demo](/images/app.png)
+<img src="images/app.gif" alt="Syndicai Showcase Demo" width="100%"/>
 
 ## Project Status
 Currenlty the project is under constant development. If you are willing to contribute, please [drop us a line](https://join.slack.com/t/syndicai/shared_invite/zt-eqbfjmyo-BCNw0gDryzU1A_6GH7xyYw) and help us spread the passion to applied AI!

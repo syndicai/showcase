@@ -2,14 +2,14 @@ import React from 'react'
 import Heading from '../components/model/heading'
 import About from '../components/model/about'
 import Run from '../components/model/run'
-import StrImage from '../components/input_output/str_json'
+import ImageImage from '../components/input_output/image_image'
 
 import models from './models.json'
 
 
-const YoloV5 = () => {
+const BlackAndWhite = () => {
 
-  const data = models[2]
+  const data = models[3]
 
   return (
     <div>
@@ -17,7 +17,7 @@ const YoloV5 = () => {
       <Heading data={data} />
 
       <Run>
-        <StrImage data={data}/>
+        {/* <ImageImage data={data}/> */}
       </Run>
 
       <About data={data} />
@@ -26,4 +26,4 @@ const YoloV5 = () => {
   )
 }
 
-export default YoloV5
+export default BlackAndWhite
