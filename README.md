@@ -1,4 +1,4 @@
-[![syndicai-logo](https://raw.githubusercontent.com/syndicai/brand/main/banner/banner_github.png)](https://syndic.ai)
+[![syndicai-logo](https://raw.githubusercontent.com/syndicai/brand/main/banner/banner_github.png)](https://syndicai.co)
 
 <p align="center">
   <a aria-label="Syndicai" href="https://syndicai.co/">
