@@ -29,7 +29,7 @@
         "name": "Object detection",
         "description": "YoloV5 object detection and classification model.",
         "path": "yolov5",
-        "model": "https://4ae97fb9-30e5-4e55-a2f3-67b4191490f4.d1.syndic.ai/predict",
+        "model": "https://83110543-f04b-4139-b139-132de8534efa.d1.syndic.ai/predict",
         "input_type": "JSON (url)",
         "output_type": "JSON (base64)",
         "sample_input": "https://raw.githubusercontent.com/syndicai/models/master/pytorch/yolov5/sample_data/input.jpeg",
