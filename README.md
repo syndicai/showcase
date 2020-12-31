@@ -34,10 +34,6 @@ Currenlty the project is under constant development. If you are willing to contr
 
 
 ## Add new model
-1. Create a new `your_model.js` file in the  `src/models` directory
-2. Add your model to model list in `src/models/models.json` with necessary data
+1. Create a new `your_model.js` file in the  `src/components/views` directory
+2. Add your model to model list in `src/constants/models.json` with necessary data
 3. Add routing in `src/router/index.js`
-
-
-## Contribute
-If you want to contribute to the prject please [drop us a line](mailto:hello@syndicai.co) or join our [slack channel](https://join.slack.com/t/syndicai/shared_invite/zt-eqbfjmyo-BCNw0gDryzU1A_6GH7xyYw).

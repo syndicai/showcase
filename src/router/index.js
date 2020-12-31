@@ -3,12 +3,15 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
-import Home from '../components/home'
+import Home from '../components/views/home'
 
-import AnimalClassifier from '../models/animalClassifier'
-import AlexNet from '../models/alexNet'
-import YoloV5 from '../models/yolov5'
-import BlackAndWhite from "../models/blackAndWhite";
+import ImageClassifier from '../components/views/imageClassifier'
+import ObjectDetection from '../components/views/objectDetector'
+import Colorizer from '../components/views/colorizer'
+import FaceBlurring from "../components/views/faceblurring";
+import StyleTransfer from "../components/views/styleTransfer";
+import InstanceSegmentation from "../components/views/instanceSegmentation";
+import MaskDetector from "../components/views/maskDetector";
 
 
 const RootRouter = () => {
@@ -17,10 +20,13 @@ const RootRouter = () => {
       <Navbar />
       <Switch>
         <Route exact path='/' component={Home}></Route>
-        <Route path='/animalclassifier' component={AnimalClassifier}></Route>
-        <Route path='/alexnet' component={AlexNet}></Route>
-        <Route path='/yolov5' component={YoloV5}></Route>
-        <Route path='/blackandwhite' component={BlackAndWhite}></Route>
+        <Route path='/image-classifier' component={ImageClassifier}></Route>
+        <Route path='/object-detector' component={ObjectDetection}></Route>
+        <Route path='/colorizer' component={Colorizer}></Route>
+        <Route path='/face-blurring' component={FaceBlurring}></Route>
+        <Route path='/style-transfer' component={StyleTransfer}></Route>
+        <Route path='/instance-segmentation' component={InstanceSegmentation}></Route>
+        <Route path='/mask-detector' component={MaskDetector}></Route>
       </Switch>
       <Footer />
     </Router>

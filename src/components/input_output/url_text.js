@@ -1,8 +1,9 @@
 import React from "react";
-import { Button, Input, Image, GeistProvider, CssBaseline } from '@geist-ui/react'
+import { Button, Input, Image, GeistProvider, CssBaseline, Code } from '@geist-ui/react'
+// import { RefreshCcw } from '@geist-ui/react-icons'
 
 
-export default class ImageImage extends React.Component {
+export default class UrlText extends React.Component {
     state = {
         model: this.props.data.model,
         img_url: this.props.data.sample_input,
@@ -11,14 +12,14 @@ export default class ImageImage extends React.Component {
     };
 
     toggleInputChange = (e) => {
-        this.setState({ img_url: e.target.value, output: null});
+        this.setState({ img_url: e.target.value});
     }
 
     toggleButtonState = () => {
         let proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-        let url = this.state.img_url
+        let input_url = this.state.img_url
         this.setState({ loading: true, output: null});
-        fetch(proxyUrl + url, {
+        fetch(proxyUrl + input_url, {
             method: 'GET',
             crossDomain: true,
             headers: {
@@ -33,8 +34,6 @@ export default class ImageImage extends React.Component {
                 let reader = new FileReader();
                 reader.readAsDataURL(data);
                 reader.onloadend = () => {
-                    let result = reader.result;
-                    let base64data = result.substr(result.indexOf(',')+1)
                     fetch(
                         this.state.model,
                         {
@@ -42,14 +41,14 @@ export default class ImageImage extends React.Component {
                             headers: {
                                 'Content-Type': 'application/json',
                             },
-                            body: JSON.stringify({ data: { ndarray: base64data } })
+                            body: JSON.stringify({ url: input_url})
                         }
                     )
                         .then((response) => {
                             return response.text();
                         })
                         .then((data) => {
-                            this.setState({ output: JSON.parse(data).strData, loading: false});
+                            this.setState({ output: data, loading: false});
                         })
                 }
             })
@@ -62,16 +61,22 @@ export default class ImageImage extends React.Component {
 
                 {/* INPUT: Image */}
                 {
-                    (this.state.output === null)
-                        ? (this.state.img_url === "")
+                    (this.state.img_url === "")
                         ? null
                         : <div className="w-full background-dots flex justify-center items-center" style={{height:"440px"}}>
                             <Image height="440" src={this.state.img_url} />
                         </div>
+                }
+
+                {/* OUTPUT: Json */}
+                {
+                    (this.state.output === null)
+                        ? null
                         : <div className="w-full background-dots flex justify-center items-center" >
-                            <Image height="440"  src={`data:image/png;base64,${this.state.output}`}/>
+                            <Code width="100%" className="bg-white" block>{this.state.output}</Code>
                         </div>
                 }
+
 
                 {/* RUN Model */}
                 <div className="my-5">
@@ -81,8 +86,6 @@ export default class ImageImage extends React.Component {
                         {/*<Button className="my-2" iconRight={<RefreshCcw />} auto />*/}
                     </div>
                 </div>
-
-                {/* OUTPUT: Json */}
 
             </GeistProvider>
         );

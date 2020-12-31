@@ -25,7 +25,7 @@ export default function About(data) {
                   <Text p type="secondary">{data.data.category}</Text>
                   <Text p type="secondary">{data.data.input_type}</Text>
                   <Text p type="secondary">{data.data.output_type}</Text>
-                  <Text p type="secondary"><a href={data.data.framework_url}>{data.data.framework}</a></Text>
+                  <Text p type="secondary">{data.data.framework}</Text>
                 </div>
               </div>
             </div>

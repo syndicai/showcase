@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Text, Link, GeistProvider, CssBaseline } from '@geist-ui/react'
+import { Card, Text, Link, GeistProvider, CssBaseline, Image } from '@geist-ui/react'
 
 
 export default function Box(model) {
@@ -10,6 +10,7 @@ export default function Box(model) {
 
       <a href={"/" + model.data.path} >
         <Card shadow width="100%">
+          <Image src={model.data.image} height="200" style={{ objectFit: 'cover' }} />
           <h3>
             {model.data.name}
           </h3>
