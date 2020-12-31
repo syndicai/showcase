@@ -1,9 +1,8 @@
 import React from "react";
-import { Button, Input, Image, GeistProvider, CssBaseline, Code } from '@geist-ui/react'
-// import { RefreshCcw } from '@geist-ui/react-icons'
+import { Button, Input, Image, GeistProvider, CssBaseline } from '@geist-ui/react'
 
 
-export default class InputJson extends React.Component {
+export default class Base64Base64 extends React.Component {
     state = {
         model: this.props.data.model,
         img_url: this.props.data.sample_input,
@@ -12,14 +11,14 @@ export default class InputJson extends React.Component {
     };
 
     toggleInputChange = (e) => {
-        this.setState({ img_url: e.target.value});
+        this.setState({ img_url: e.target.value, output: null});
     }
 
     toggleButtonState = () => {
         let proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-        let input_url = this.state.img_url
+        let url = this.state.img_url
         this.setState({ loading: true, output: null});
-        fetch(proxyUrl + input_url, {
+        fetch(proxyUrl + url, {
             method: 'GET',
             crossDomain: true,
             headers: {
@@ -34,6 +33,8 @@ export default class InputJson extends React.Component {
                 let reader = new FileReader();
                 reader.readAsDataURL(data);
                 reader.onloadend = () => {
+                    let result = reader.result;
+                    let base64data = result.substr(result.indexOf(',')+1)
                     fetch(
                         this.state.model,
                         {
@@ -41,7 +42,7 @@ export default class InputJson extends React.Component {
                             headers: {
                                 'Content-Type': 'application/json',
                             },
-                            body: JSON.stringify({ url: input_url})
+                            body: JSON.stringify({ base64: base64data })
                         }
                     )
                         .then((response) => {
@@ -61,22 +62,16 @@ export default class InputJson extends React.Component {
 
                 {/* INPUT: Image */}
                 {
-                    (this.state.img_url === "")
+                    (this.state.output === null)
+                        ? (this.state.img_url === "")
                         ? null
                         : <div className="w-full background-dots flex justify-center items-center" style={{height:"440px"}}>
                             <Image height="440" src={this.state.img_url} />
                         </div>
-                }
-
-                {/* OUTPUT: Json */}
-                {
-                    (this.state.output === null)
-                        ? null
                         : <div className="w-full background-dots flex justify-center items-center" >
-                            <Code width="100%" className="bg-white" block>{this.state.output}</Code>
+                            <Image height="440"  src={`data:image/png;base64,${this.state.output}`}/>
                         </div>
                 }
-
 
                 {/* RUN Model */}
                 <div className="my-5">

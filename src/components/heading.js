@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, GeistProvider, CssBaseline } from '@geist-ui/react'
 
-import link from './../../constants/syndicai.json'
+import link from './../constants/syndicai.json'
 
 
 export default function Title() {

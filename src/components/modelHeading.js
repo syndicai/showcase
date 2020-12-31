@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, GeistProvider, CssBaseline } from '@geist-ui/react'
+import { Text, Link, GeistProvider, CssBaseline } from '@geist-ui/react'
 
 
 export default function Heading(data) {
@@ -8,8 +8,11 @@ export default function Heading(data) {
       <CssBaseline />
 
       <div className="w-full h-64 flex items-center">
-        <div className="container max-w-5xl mx-auto px-3 xl:px-0 text-center">
+        <div className="container max-w-5xl mx-auto xl:px-0 text-center">
           <Text h2>{data.data.name}</Text> 
+          <Link color target="_blank" href={data.data.github}>
+            <Text small>Visit source code</Text>
+          </Link>
         </div>
       </div>
 
