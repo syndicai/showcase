@@ -1,19 +1,19 @@
 {
-    "syndicai_website": "https://syndicai.co/",
-    "syndicai_enterprise": "https://syndicai.co/enterprise",
-    "syndicai_platform": "https://app.syndicai.co/",
-    "syndicai_docs": "https://docs.syndic.ai/",
+"syndicai_website": "https://syndicai.co/",
+"syndicai_enterprise": "https://syndicai.co/enterprise",
+"syndicai_platform": "https://app.syndicai.co/",
+"syndicai_docs": "https://docs.syndicai.co/",
 
-    "syndicai_feedback": "https://hello439057.typeform.com/to/jgEaC5nY",
-    "syndicai_mail": "hello@syndicai.co",
+"syndicai_feedback": "https://syndicai.slack.com/join/shared_invite/zt-eqbfjmyo-BCNw0gDryzU1A_6GH7xyYw",
+"syndicai_mail": "hello@syndicai.co",
 
-    "syndicai_logo": "https://raw.githubusercontent.com/syndicai/brand/main/logo/logo.svg",
+"syndicai_logo": "https://raw.githubusercontent.com/syndicai/brand/main/logo/sai_logo.svg",
 
-    "syndicai_github": "https://github.com/syndicai/",
-    "syndicai_slack": "https://join.slack.com/t/syndicai/shared_invite/zt-eqbfjmyo-BCNw0gDryzU1A_6GH7xyYw",
-    "syndicai_linkedin": "https://linkedin.com/company/syndicai",
-    "syndicai_facebook": "https://facebook.com/syndicai",
-    "syndicai_medium": "https://medium.com/syndicai",
+"syndicai_github": "https://github.com/syndicai/",
+"syndicai_slack": "https://join.slack.com/t/syndicai/shared_invite/zt-eqbfjmyo-BCNw0gDryzU1A_6GH7xyYw",
+"syndicai_linkedin": "https://linkedin.com/company/syndicai",
+"syndicai_facebook": "https://facebook.com/syndicai",
+"syndicai_medium": "https://medium.com/syndicai",
 
-    "showcase_github": "https://github.com/syndicai/showcase"
+"showcase_github": "https://github.com/syndicai/showcase"
 }
